@@ -14,6 +14,37 @@ export default function Home (){
 
 }
     
+
+ 
+  const styles = StyleSheet.create({
+    container : {
+        // flex:1,
+        elevation: 8,
+        backroundcolor:'#fff',
+        alignItems:'center',
+        justifyContent:'center',
+        paddingVertical: 12,
+        paddingHorizontal: 32,
+        borderRadius: 4,
+        elevation: 3,
+        backgroundColor: 'black',
+
+        
+    },
+    text: {
+      fontSize: 16,
+      lineHeight: 21,
+      fontWeight: 'bold',
+      letterSpacing: 0.25,
+      color: 'white',
+
+    }
+})
+
+
+
+
+
 /*
 function AppButton({ onPress, title }) {
     return (
@@ -42,15 +73,3 @@ function AppButton({ onPress, title }) {
     }
   });
  */
- 
-  const styles = StyleSheet.create({
-    container : {
-     //   flex:1,
-        elevation: 8,
-        backroundcolor:'#fff',
-        alignItems:'center',
-        justifyContent:'center'
-        
-    }
-})
-
