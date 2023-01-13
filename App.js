@@ -12,7 +12,7 @@ const Stack = createStackNavigator();
 function App() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="Quick Scan" component={Home} />
       <Stack.Screen name="Scanner" component={Scanner} />
       <Stack.Screen name="Sms" component={Sms} />
     </Stack.Navigator>

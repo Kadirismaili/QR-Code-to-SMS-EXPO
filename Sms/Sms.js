@@ -54,23 +54,6 @@ const Sms = ({ navigation, route }) => {
     setPhoneNumber(item.phoneNumbers[0].number);
   };
 
-  // const renderItem = ({ item, index }) => {
-  //   if (item?.phoneNumbers[0] === undefined) return;
-
-  //   return (
-  //     <TouchableOpacity
-  //       style={styles.contact}
-  //       activeOpacity={0.7}
-  //       onPress={() => onContactPress({ item })}
-  //     >
-  //       <Text>
-  //         {item?.firstName} {item?.lastName}
-  //       </Text>
-  //       <Text>{item?.phoneNumbers[0]?.number}</Text>
-  //     </TouchableOpacity>
-  //   );
-  // };
-
   const filtercontacts = (text) => {
     console.log("CONTACTS" + JSON.stringify(allContacts[80].firstName));
 
@@ -105,7 +88,7 @@ const Sms = ({ navigation, route }) => {
             return (
               <TouchableOpacity
                 style={styles.result}
-                onPress={() => onContactPress(filteredContacts[0])}
+                onPress={() => onContactPress(item)}
                 activeOpacity={0.7}
               >
                 <Text> {item?.firstName}</Text>
@@ -115,19 +98,10 @@ const Sms = ({ navigation, route }) => {
           }}
         />
       )}
-      {/* <TextInput
-        placeholder="Message"
-        value={message}
-        onChangeText={setMessage}
-      /> */}
+
       <TouchableOpacity style={styles.button} onPress={handleSendSMS}>
         <Text style={{ color: "white" }}>Send SMS</Text>
       </TouchableOpacity>
-      {/* <FlatList
-        data={allContacts}
-        renderItem={renderItem}
-        keyExtractor={(item) => item.phoneNumbers[0].number}
-      /> */}
     </View>
   );
 };
